@@ -1,10 +1,9 @@
 import React from 'react';
 
-const ListGroup = (props) => {
+const ListGroup = ({items, textProperty, valueProperty, onItemSelect, selectedItem}) => {
 
-    const {items, textProperty, valueProperty, onItemSelect, selectedItem} = props;
     return (
-        <ul className="list-group">
+        <ul className="list-group list-group-flush">
             {items.map(item => (
                 <li
                     onClick={() => onItemSelect(item)}
